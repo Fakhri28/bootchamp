@@ -1,0 +1,8 @@
+#import "./fragments.gql"
+
+mutation addUserLog {
+  addUserLog {
+    _id
+    status
+  }
+}

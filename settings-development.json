@@ -1,0 +1,28 @@
+{
+    "public": {
+      "hostForce": "",
+      "dbReset": "none",
+      "graphQL": {
+        "httpUri": "http://localhost:3000/graphql"
+      },
+      "default": {
+        "logoUrl": "/common/img/50x50.png",
+        "imgUrl": "/common/img/370x370.png"
+      },
+      "perPage": 12,
+      "cloudUrl": ""
+    },
+    "private": {
+      "FILES_PATH": "",
+      "MAIL_URL": "",
+      "supportEmail": "PT Maya Katalis Cipta Buana <info@mayacatalyst.com>",
+      "rolesGlobal": ["user", "member", "spv", "admin"],
+      "s3": {
+        "accessKey": "",
+        "secretKey": "",
+        "bucket": "",
+        "region": "",
+        "folder": "development"
+      }
+    }
+  }

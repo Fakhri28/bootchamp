@@ -1,0 +1,7 @@
+#import "./fragments.gql"
+
+query detailEmailSubscriber($_id: String) {
+  detailEmailSubscriber(_id: $_id) {
+    ...EmailSubscriberAttributes
+  }
+}

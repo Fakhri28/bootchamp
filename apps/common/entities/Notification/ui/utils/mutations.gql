@@ -1,0 +1,38 @@
+#import "./fragments.gql"
+
+mutation addNotification {
+  addNotification {
+    _id
+    status
+  }
+}
+mutation updateNotification($inputNotification: NotificationInput) {
+  updateNotification(inputNotification: $inputNotification) {
+    ...NotificationAttributes
+  }
+}
+mutation removeNotification($_id: String!) {
+  removeNotification(_id: $_id) {
+    _id
+    status
+  }
+}
+
+mutation setNotificationStatusToDraft($_id: String!, $description: String) {
+  setNotificationStatusToDraft(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}
+mutation setNotificationStatusToActive($_id: String!, $description: String) {
+  setNotificationStatusToActive(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}
+mutation setNotificationStatusToClosed($_id: String!, $description: String) {
+  setNotificationStatusToClosed(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}

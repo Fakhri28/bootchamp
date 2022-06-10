@@ -1,0 +1,12 @@
+#import "./fragments.gql"
+
+query detailContoh($_id: String) {
+  detailContoh(_id: $_id) {
+    ...ContohAttributes
+  }
+}
+query getContoh($_id: String) {
+  getContoh(_id: $_id) {
+    ...ContohAttributes
+  }
+}

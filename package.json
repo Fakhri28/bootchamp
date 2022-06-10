@@ -1,0 +1,207 @@
+{
+  "name": "lelang",
+  "private": true,
+  "version": "0.3.0",
+  "description": "ETHOS - Auction",
+  "author": "johnson.chandra@gmail.com",
+  "scripts": {
+    "dev": "meteor run --settings settings-development.json",
+    "dev_with_ip": "ROOT_URL=http://192.168.1.127:3000 meteor run --settings settings-development.json",
+    "dev-prod": "meteor run --production --settings settings-development.json",
+    "staging": "DEPLOY_HOSTNAME=us-east-1.galaxy-deploy.meteor.com meteor deploy lelang.labkulit.com --settings settings-staging.json --owner bagiilmu",
+    "prod": "DEPLOY_HOSTNAME=us-east-1.galaxy-deploy.meteor.com meteor deploy lelang.maya.network --settings settings-prod.json --owner bagiilmu",
+    "free": "meteor deploy catalyst.meteorapp.com --settings settings-free.json --free --mongo",
+    "test": "meteor test --once --driver-package meteortesting:mocha --settings settings-development.json",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha --settings settings-development.json",
+    "test-e2e-chrome": "testcafe chrome tests/apps/**/*.e2e.js",
+    "test-e2e-chrome:headless": "testcafe chrome:headless tests/apps/**/*.e2e.js",
+    "visualize": "meteor --settings settings-development.json --production --extra-packages bundle-visualizer"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-meteor": "^0.4.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^25.7.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-meteor": "^7.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-testcafe": "^0.2.1",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "lint-staged": "^11.2.6",
+    "prettier": "^2.6.2",
+    "testcafe": "^1.18.5"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.17.9",
+    "@graphql-tools/schema": "^8.3.7",
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^1.0.6",
+    "@tailwindcss/aspect-ratio": "^0.3.0",
+    "@tailwindcss/forms": "^0.3.4",
+    "@tailwindcss/typography": "^0.4.1",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link": "^1.2.14",
+    "apollo-link-error": "^1.1.13",
+    "apollo-link-http": "^1.5.17",
+    "apollo-server-express": "^3.6.7",
+    "autoprefixer": "^10.4.4",
+    "babel-plugin-lodash": "^3.3.4",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3",
+    "faker": "^5.5.3",
+    "file-saver": "^2.0.5",
+    "formik": "^2.2.9",
+    "graphql": "^16.3.0",
+    "handlebars": "^4.7.7",
+    "isomorphic-fetch": "^3.0.0",
+    "jquery": "^3.6.0",
+    "jquery-validation": "^1.19.3",
+    "jszip": "^3.9.1",
+    "juice": "^8.0.0",
+    "lodash": "^4.17.21",
+    "meteor-node-stubs": "^1.2.1",
+    "moment": "^2.29.2",
+    "moment-timezone": "^0.5.34",
+    "postcss": "^8.4.12",
+    "postcss-load-config": "^3.1.4",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-apollo": "^3.1.5",
+    "react-autobind": "^1.0.6",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^5.3.0",
+    "sanitize-html": "^2.7.0",
+    "tailwindcss": "^2.2.19",
+    "telnet-client": "^1.4.11",
+    "url-pattern": "^1.0.3",
+    "yup": "^0.32.11"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.js",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "eslintConfig": {
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "babel",
+      "jest",
+      "meteor",
+      "prettier",
+      "react",
+      "testcafe"
+    ],
+    "extends": [
+      "airbnb",
+      "plugin:prettier/recommended",
+      "plugin:meteor/recommended",
+      "plugin:react/recommended",
+      "plugin:testcafe/recommended",
+      "plugin:jest/recommended"
+    ],
+    "env": {
+      "browser": true
+    },
+    "globals": {
+      "expect": false
+    },
+    "rules": {
+      "arrow-parens": [
+        2,
+        "always"
+      ],
+      "import/no-unresolved": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/extensions": 0,
+      "indent": 0,
+      "jsx-a11y/anchor-is-valid": [
+        "error",
+        {
+          "components": [
+            "Link"
+          ],
+          "specialLink": [
+            "to"
+          ]
+        }
+      ],
+      "max-len": 0,
+      "no-alert": 0,
+      "no-console": 0,
+      "no-restricted-globals": 0,
+      "no-return-assign": [
+        "error",
+        "except-parens"
+      ],
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "_id",
+            "_ensureIndex",
+            "_verifyEmailToken",
+            "_resetPasswordToken",
+            "_name"
+          ]
+        }
+      ],
+      "class-methods-use-this": 0,
+      "prettier/prettier": 2,
+      "react/jsx-filename-extension": 0,
+      "react/forbid-prop-types": 0
+    },
+    "settings": {
+      "import/resolver": "meteor"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "./.githooks/pre-commit.sh",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "always",
+    "rangeStart": 0,
+    "parser": "babel",
+    "proseWrap": "preserve"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

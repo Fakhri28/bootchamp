@@ -1,0 +1,38 @@
+#import "./fragments.gql"
+
+mutation addEmailSubscriber {
+  addEmailSubscriber {
+    _id
+    status
+  }
+}
+mutation updateEmailSubscriber($inputEmailSubscriber: EmailSubscriberInput) {
+  updateEmailSubscriber(inputEmailSubscriber: $inputEmailSubscriber) {
+    ...EmailSubscriberAttributes
+  }
+}
+mutation removeEmailSubscriber($_id: String!) {
+  removeEmailSubscriber(_id: $_id) {
+    _id
+    status
+  }
+}
+
+mutation setEmailSubscriberStatusToDraft($_id: String!, $description: String) {
+  setEmailSubscriberStatusToDraft(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}
+mutation setEmailSubscriberStatusToActive($_id: String!, $description: String) {
+  setEmailSubscriberStatusToActive(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}
+mutation setEmailSubscriberStatusToClosed($_id: String!, $description: String) {
+  setEmailSubscriberStatusToClosed(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}

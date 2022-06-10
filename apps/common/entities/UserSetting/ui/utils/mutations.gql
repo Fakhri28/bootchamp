@@ -1,0 +1,38 @@
+#import "./fragments.gql"
+
+mutation addUserSetting {
+  addUserSetting {
+    _id
+    status
+  }
+}
+mutation updateUserSetting($inputUserSetting: UserSettingInput) {
+  updateUserSetting(inputUserSetting: $inputUserSetting) {
+    ...UserSettingAttributes
+  }
+}
+mutation removeUserSetting($_id: String!) {
+  removeUserSetting(_id: $_id) {
+    _id
+    status
+  }
+}
+
+mutation setUserSettingStatusToDraft($_id: String!, $description: String) {
+  setUserSettingStatusToDraft(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}
+mutation setUserSettingStatusToActive($_id: String!, $description: String) {
+  setUserSettingStatusToActive(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}
+mutation setUserSettingStatusToClosed($_id: String!, $description: String) {
+  setUserSettingStatusToClosed(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}

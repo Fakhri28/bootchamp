@@ -1,0 +1,26 @@
+const statusStyles = {
+  Draft: 'bg-yellow-100 text-gray-800',
+  Online_Idle: 'bg-yellow-200 text-gray-800',
+  Queue: 'bg-yellow-200 text-gray-800',
+  Processing: 'bg-yellow-300 text-gray-800',
+  WaitingApproval: 'bg-yellow-300 text-gray-800',
+  PaymentPending: 'bg-yellow-100 text-gray-800',
+  PaymentPartial: 'bg-yellow-300 text-gray-800',
+  Online: 'bg-green-100 text-gray-800',
+  Online_Active: 'bg-green-100 text-gray-800',
+  Active: 'bg-green-200 text-gray-800',
+  Inactive: 'bg-yellow-500 text-gray-800',
+  Delivering: 'bg-green-300 text-gray-800',
+  Success: 'bg-green-500 text-gray-800',
+  Approved: 'bg-green-200 text-gray-800',
+  Paid: 'bg-green-200 text-gray-800',
+  Closed: 'bg-green-300 text-gray-800',
+  Return: 'bg-red-200 text-gray-800',
+  Void: 'bg-red-200 text-gray-800',
+  Rejected: 'bg-red-200 text-gray-800',
+  Cancel: 'bg-red-200 text-gray-800',
+  Offline: 'bg-red-100 text-gray-800',
+  Error: 'bg-red-500 text-gray-800',
+};
+
+export default statusStyles;

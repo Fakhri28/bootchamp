@@ -1,0 +1,29 @@
+fragment FileAttributes on File {
+    fsUrl
+
+    localUrl
+    cloudUrl
+    size
+    mimeType
+    typeId
+
+    _id
+    name
+    type
+    status
+    description
+    createdBy
+    createdAt
+    updatedBy
+    updatedAt
+
+    histories {
+        party {
+            _id
+            type
+            name
+        }
+        description
+        timestamp
+    }
+}

@@ -1,0 +1,7 @@
+#import "./fragments.gql"
+
+query detailUserSetting($_id: String) {
+  detailUserSetting(_id: $_id) {
+    ...UserSettingAttributes
+  }
+}

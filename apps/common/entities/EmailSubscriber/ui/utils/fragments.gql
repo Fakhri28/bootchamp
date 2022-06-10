@@ -1,0 +1,26 @@
+fragment EmailSubscriberAttributes on EmailSubscriber {
+    email
+
+
+    type
+
+    _id
+    name
+    type
+    status
+    description
+    createdBy
+    createdAt
+    updatedBy
+    updatedAt
+
+    histories {
+        party {
+            _id
+            type
+            name
+        }
+        description
+        timestamp
+    }
+}

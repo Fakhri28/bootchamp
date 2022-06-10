@@ -1,0 +1,36 @@
+#import "./fragments.gql"
+
+mutation updateUser($user: UserInput) {
+  updateUser(user: $user) {
+    ...UserAttributes
+  }
+}
+mutation updateUserRoles($party: UserInput) {
+  updateUserRoles(party: $party) {
+    ...UserAttributes
+  }
+}
+
+mutation setUserSettingsByHostToTrue {
+  setUserSettingsByHostToTrue {
+    ...UserAttributes
+  }
+}
+
+mutation sendVerificationEmail {
+  sendVerificationEmail {
+    _id
+  }
+}
+
+mutation forgotPassword($email: String!) {
+  forgotPassword(email: $email) {
+    _id
+  }
+}
+
+mutation sendWelcomeEmail {
+  sendWelcomeEmail {
+    _id
+  }
+}

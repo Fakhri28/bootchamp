@@ -1,0 +1,7 @@
+#import "./fragments.gql"
+
+query detailUserLog($_id: String) {
+  detailUserLog(_id: $_id) {
+    ...UserLogAttributes
+  }
+}

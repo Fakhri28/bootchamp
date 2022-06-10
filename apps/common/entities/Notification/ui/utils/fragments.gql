@@ -1,0 +1,44 @@
+fragment NotificationAttributes on Notification {
+    host
+
+    from {
+        _id
+        type
+        name
+        shortname
+        logoUrl
+    }
+    to {
+        _id
+        type
+        name
+        shortname
+        logoUrl
+    }
+    linkUrls {
+        _id
+        name
+        type
+        linkUrl
+    }
+
+    _id
+    name
+    type
+    status
+    description
+    createdBy
+    createdAt
+    updatedBy
+    updatedAt
+
+    histories {
+        party {
+            _id
+            type
+            name
+        }
+        description
+        timestamp
+    }
+}

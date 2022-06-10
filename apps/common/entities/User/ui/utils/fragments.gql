@@ -1,0 +1,32 @@
+fragment UserAttributes on User {
+  _id
+  fullname
+  shortname
+  emailAddress
+  phone
+  gender
+  province
+  country
+  about
+
+  Image_User_PP
+  Image_User_Cover
+  Image_User_IDCard
+
+  roles {
+    name
+    value
+    defaultChecked
+  }
+
+  settings {
+      _id
+      isGDPR
+      key
+      label
+      type
+      value
+      updatedAt
+      setByUser
+  }
+}

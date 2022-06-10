@@ -1,0 +1,38 @@
+#import "./fragments.gql"
+
+mutation addCounter {
+  addCounter {
+    _id
+    status
+  }
+}
+mutation updateCounter($inputCounter: CounterInput) {
+  updateCounter(inputCounter: $inputCounter) {
+    ...CounterAttributes
+  }
+}
+mutation removeCounter($_id: String!) {
+  removeCounter(_id: $_id) {
+    _id
+    status
+  }
+}
+
+mutation setCounterStatusToDraft($_id: String!, $description: String) {
+  setCounterStatusToDraft(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}
+mutation setCounterStatusToActive($_id: String!, $description: String) {
+  setCounterStatusToActive(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}
+mutation setCounterStatusToClosed($_id: String!, $description: String) {
+  setCounterStatusToClosed(_id: $_id, description: $description) {
+    _id
+    status
+  }
+}
